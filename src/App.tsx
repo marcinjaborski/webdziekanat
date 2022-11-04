@@ -1,6 +1,10 @@
 import TopBar from "./components/TopBar";
-import { createTheme, ThemeProvider } from "@mui/material";
+import { Box, createTheme, ThemeProvider } from "@mui/material";
 import NavigationDrawer from "./components/NavigationDrawer";
+import HomePage from "./components/HomePage";
+import { Route, Routes } from "react-router";
+
+export const primaryColor = "#8b0304";
 
 const theme = createTheme({
   typography: {
@@ -8,7 +12,7 @@ const theme = createTheme({
   },
   palette: {
     primary: {
-      main: "#8b0304",
+      main: primaryColor,
     },
   },
 });
@@ -17,7 +21,14 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <TopBar />
-      <NavigationDrawer />
+      <Box className="content">
+        <NavigationDrawer />
+        <Box sx={{ p: 3, width: "100%" }}>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+          </Routes>
+        </Box>
+      </Box>
     </ThemeProvider>
   );
 }

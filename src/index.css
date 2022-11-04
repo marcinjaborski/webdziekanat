@@ -13,6 +13,15 @@ code {
 }
 
 a {
-  color: inherit;
+  color: #8b0304;
   text-decoration: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.content {
+  display: flex;
+  min-height: calc(100vh - 64px);
 }

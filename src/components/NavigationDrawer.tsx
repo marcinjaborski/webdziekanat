@@ -17,12 +17,7 @@ const NavigationDrawer = () => {
   const [open, setOpen] = useState(true);
   return (
     <NavigationDrawerStyled>
-      <Drawer
-        variant="persistent"
-        anchor="left"
-        open={open}
-        sx={{ pt: "50px" }}
-      >
+      <Drawer variant="persistent" anchor="left" open={open}>
         <Button startIcon={<HomeIcon />}>virTul</Button>
         <Button startIcon={<WorkIcon />}>
           Statutes, regulations, ordinances

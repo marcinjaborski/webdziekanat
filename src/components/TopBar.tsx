@@ -1,19 +1,12 @@
-import {
-  AppBar,
-  Box,
-  Button,
-  ButtonGroup,
-  IconButton,
-  Toolbar,
-  Typography,
-} from "@mui/material";
-import MenuIcon from "@mui/icons-material/Menu";
-import { Link } from "react-router-dom";
+import { AppBar, Button, ButtonGroup, IconButton, Toolbar, Typography } from '@mui/material';
+import MenuIcon from '@mui/icons-material/Menu';
+import { Link } from 'react-router-dom';
+import { TopBarStyled } from '../styles/TopBar.styled';
 
 const TopBar = () => {
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="fixed">
+    <TopBarStyled>
+      <AppBar position="sticky">
         <Toolbar>
           <IconButton size="large" edge="start" color="inherit" sx={{ mr: 2 }}>
             <MenuIcon />
@@ -28,7 +21,7 @@ const TopBar = () => {
           <Button color="inherit">Login</Button>
         </Toolbar>
       </AppBar>
-    </Box>
+    </TopBarStyled>
   );
 };
 

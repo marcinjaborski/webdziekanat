@@ -1,9 +1,14 @@
 import styled from "styled-components";
 
 export const NavigationDrawerStyled = styled.div`
+  .MuiDrawer-root {
+    height: 100%;
+    min-width: 350px;
+  }
+
   .MuiPaper-root {
     z-index: 500;
-    padding-top: 64px;
+    position: sticky;
   }
 
   button {
