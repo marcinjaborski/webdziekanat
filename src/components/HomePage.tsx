@@ -5,6 +5,7 @@ import ScheduleIcon from '@mui/icons-material/Schedule';
 import SchoolIcon from '@mui/icons-material/School';
 import PersonIcon from '@mui/icons-material/Person';
 import { primaryColor } from '../App';
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
   return (
@@ -14,10 +15,12 @@ const HomePage = () => {
         students and staff members of the Technical University of Lodz
       </Typography>
       <Box className="tileContainer">
-        <Paper sx={{ bgcolor: '#46909b' }}>
-          <DashboardIcon />
-          Bulletin Board
-        </Paper>
+        <Link to="/bulletinBoard">
+          <Paper sx={{ bgcolor: '#46909b' }}>
+            <DashboardIcon />
+            Bulletin Board
+          </Paper>
+        </Link>
         <Paper sx={{ bgcolor: '#336d71' }}>
           <ScheduleIcon />
           Course Schedule
