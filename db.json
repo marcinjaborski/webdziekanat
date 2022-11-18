@@ -64,5 +64,133 @@
       "whole": 4.9,
       "ects": "120/150"
     }
-  }
+  },
+  "grades": [{
+    "name": "2022/2023 Z - 5",
+    "average": null,
+    "ects": null,
+    "subjects": [{
+      "code": "22 911553 40",
+      "name": "Civic Knowledge and Engagement 4",
+      "instructor": "mgr Iwona Wróblewska",
+      "ects": 1,
+      "grade": null
+    }, {
+      "code": "02 636340 00",
+      "name": "Computer Aided Design",
+      "instructor": "dr inż. Witold Kubiak",
+      "ects": 3,
+      "grade": null
+    }, {
+      "code": "02 576198 00",
+      "name": "Computer Graphics",
+      "instructor": "dr hab. inż. Mariusz Zubert",
+      "ects": 3,
+      "grade": null
+    }, {
+      "code": "02 866131 00",
+      "name": "Diploma Proseminar",
+      "instructor": "dr hab. inż. Lidia Jackowska-Strumiłło",
+      "ects": 1,
+      "grade": null
+    }, {
+      "code": "02 526421 00",
+      "name": "GUI-programming",
+      "instructor": "dr inż. Jacek Nowakowski",
+      "ects": 3,
+      "grade": null
+    }, {
+      "code": "02 646214 01",
+      "name": "Internet of Things",
+      "instructor": "dr inż. Piotr Zając",
+      "ects": 5,
+      "grade": null
+    }, {
+      "code": "02 556163 01",
+      "name": "Operating Systems",
+      "instructor": "dr hab. inż. Krzysztof Grudzień",
+      "ects": 5,
+      "grade": null
+    }, {
+      "code": "02 966203 01",
+      "name": "Professional Design Project",
+      "instructor": "dr hab. Laurent Babout",
+      "ects": 9,
+      "grade": null
+    }]
+  },{
+    "name": "2021/2022 L - 4",
+    "average": 4.74,
+    "ects": 30,
+    "subjects": [{
+      "code": "22 911553 30",
+      "name": "Civic Knowledge and Engagement 3",
+      "instructor": "mgr Iwona Wróblewska",
+      "ects": 1,
+      "grade": 5
+    },{
+      "code": "02 545874 00",
+      "name": "Computer Architecture",
+      "instructor": "dr inż. Witold Marańda",
+      "ects": 5,
+      "grade": 4.5
+    }, {
+      "code": "02 616147 00",
+      "name": "Embedded Systems",
+      "instructor": "dr hab. inż. Dariusz Makowski",
+      "ects": 5,
+      "grade": 3.5
+    }, {
+      "code": "02 576196 00",
+      "name": "Human Computer Interaction",
+      "instructor": "dr inż. Magdalena Wróbel-Lachowska",
+      "ects": 5,
+      "grade": 4
+    }, {
+      "code": "02 646211 00",
+      "name": "Interactive Web Applications",
+      "instructor": "dr inż. Rafał Kotas",
+      "ects": 3,
+      "grade": 5
+    }, {
+      "code": "22 925501 30",
+      "name": "Język hiszpański A0-A1 b.3 (a)",
+      "instructor": "mgr Agnieszka Rogaczewska-Granatowska",
+      "ects": 2,
+      "grade": 4.5
+    }, {
+      "code": "02 606212 00",
+      "name": "Software Engineering",
+      "instructor": "dr inż. Tomasz Kowalski",
+      "ects": 3,
+      "grade": 4
+    }, {
+      "code": "02 966179 00",
+      "name": "Team Project",
+      "instructor": "dr inż. Krzysztof Tomalczyk",
+      "ects": 6,
+      "grade": 5
+    }, {
+      "code": "23 923111 30",
+      "name": "Wychowanie fizyczne m. 3",
+      "instructor": "mgr Agata Czarnecka",
+      "ects": 0,
+      "grade": "zal"
+    }]
+  },{
+    "name": "2021/2022 Z - 3",
+    "average": 4.43,
+    "ects": 30,
+    "subjects": []
+  },{
+    "name": "2020/2021 L - 2",
+    "average": 4.76,
+    "ects": 30,
+    "subjects": []
+  },{
+    "name": "2020/2021 Z - 1",
+    "average": 4.52,
+    "ects": 30,
+    "subjects": []
+  }]
 }

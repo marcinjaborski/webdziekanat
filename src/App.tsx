@@ -7,6 +7,7 @@ import BulletinBoard from './components/BulletinBoard';
 import CourseSchedule from './components/CourseSchedule';
 import PersonalDataPage from './components/PersonalDataPage';
 import GeneralDataPage from './components/General';
+import ReportCard from './components/ReportCard';
 
 export const primaryColor = '#8b0304';
 
@@ -34,6 +35,7 @@ function App() {
             <Route path="/schedule" element={<CourseSchedule />} />
             <Route path="/personalData" element={<PersonalDataPage />} />
             <Route path="/generalData" element={<GeneralDataPage />} />
+            <Route path="/reportCard" element={<ReportCard />} />
           </Routes>
         </Box>
       </Box>
