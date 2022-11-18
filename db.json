@@ -30,5 +30,22 @@
       "title": "Tellus mauris a diam maecenas sed enim",
       "description": "Eu sem integer vitae justo eget magna fermentum iaculis eu. Ipsum dolor sit amet consectetur adipiscing elit. Pharetra convallis posuere morbi leo. Sit amet volutpat consequat mauris nunc congue nisi vitae. Purus sit amet luctus venenatis lectus magna fringilla urna. Felis donec et odio pellentesque diam. Mauris sit amet massa vitae tortor condimentum lacinia quis vel. Suscipit adipiscing bibendum est ultricies. Pellentesque sit amet porttitor eget dolor morbi non. Quam adipiscing vitae proin sagittis nisl rhoncus."
     }
-  ]
+  ],
+  "personal": {
+    "name": "Marcin",
+    "surname": "Jaborski",
+    "fatherName": "Lech",
+    "birthPlace": "Zgierz",
+    "birthDate": "14.05.2000",
+    "pesel": "11111111111",
+    "phone": "603623524",
+    "address": {
+      "street": "Limanowskiego",
+      "streetNo": "69",
+      "apartment": "11",
+      "postcode": "53-528",
+      "city": "Łódź",
+      "voivodeship": "łódzkie"
+    }
+  }
 }

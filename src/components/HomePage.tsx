@@ -33,10 +33,12 @@ const HomePage = () => {
             ECTS Course catalogue
           </Paper>
         </a>
-        <Paper sx={{ bgcolor: '#750105' }}>
-          <PersonIcon />
-          Personal data
-        </Paper>
+        <Link to="/personalData">
+          <Paper sx={{ bgcolor: '#750105' }}>
+            <PersonIcon />
+            Personal data
+          </Paper>
+        </Link>
       </Box>
       <Typography variant="subtitle2" sx={{ color: 'green', fontWeight: 'bold', m: 1 }}>
         Attention!
