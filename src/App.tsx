@@ -10,6 +10,7 @@ import GeneralDataPage from './components/General';
 import ReportCard from './components/ReportCard';
 import ElectiveCourses from './components/ElectiveCourses';
 import Terms from './components/Terms';
+import Login from './components/Login';
 
 export const primaryColor = '#8b0304';
 
@@ -40,6 +41,7 @@ function App() {
             <Route path="/reportCard" element={<ReportCard />} />
             <Route path="/electiveCourses" element={<ElectiveCourses />} />
             <Route path="/terms" element={<Terms />} />
+            <Route path="/login" element={<Login />} />
           </Routes>
         </Box>
       </Box>
