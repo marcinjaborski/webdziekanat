@@ -4,6 +4,7 @@ import NavigationDrawer from './components/NavigationDrawer';
 import HomePage from './components/HomePage';
 import { Route, Routes } from 'react-router';
 import BulletinBoard from './components/BulletinBoard';
+import CourseSchedule from './components/CourseSchedule';
 
 export const primaryColor = '#8b0304';
 
@@ -28,6 +29,7 @@ function App() {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/bulletinBoard" element={<BulletinBoard />} />
+            <Route path="/schedule" element={<CourseSchedule />} />
           </Routes>
         </Box>
       </Box>

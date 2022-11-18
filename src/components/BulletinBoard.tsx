@@ -11,12 +11,12 @@ type Information = {
 
 const BulletinBoard = () => {
   const [expanded, setExpanded] = useState<number | false>(false);
-  const [informatios, setInformations] = useState<Information[]>();
+  const [information, setInformation] = useState<Information[]>();
 
   useEffect(() => {
     (async () => {
       const response = await axios.get('http://localhost:5000/information');
-      setInformations(response.data);
+      setInformation(response.data);
     })();
   }, []);
 
@@ -26,7 +26,7 @@ const BulletinBoard = () => {
   return (
     <>
       <Typography variant="h4">Bulletin Board</Typography>
-      {informatios?.map((inf) => (
+      {information?.map((inf) => (
         <Accordion key={inf.id} expanded={expanded === inf.id} onChange={handleExpand(inf.id)}>
           <AccordionSummary expandIcon={<ExpandMoreIcon />}>
             <Typography>{inf.title}</Typography>

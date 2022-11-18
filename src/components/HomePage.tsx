@@ -21,10 +21,12 @@ const HomePage = () => {
             Bulletin Board
           </Paper>
         </Link>
-        <Paper sx={{ bgcolor: '#336d71' }}>
-          <ScheduleIcon />
-          Course Schedule
-        </Paper>
+        <Link to="/schedule">
+          <Paper sx={{ bgcolor: '#336d71' }}>
+            <ScheduleIcon />
+            Course Schedule
+          </Paper>
+        </Link>
         <a href="https://programy.p.lodz.pl/ectslabel-web/" target="_blank" rel="noreferrer">
           <Paper sx={{ bgcolor: '#7d882e' }}>
             <SchoolIcon />
