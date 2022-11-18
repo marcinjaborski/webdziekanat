@@ -192,5 +192,33 @@
     "average": 4.52,
     "ects": 30,
     "subjects": []
+  }],
+  "elective": [{
+    "code": "0257619800",
+    "name": "Computer Graphics",
+    "instructor": "Zubert Mariusz, dr hab. inż.",
+    "available": "1/99",
+    "enrolled": "16",
+    "ects": "3",
+    "semester": "5",
+    "selected": true
+  }, {
+    "code": "0252642100",
+    "name": "GUI-programming",
+    "instructor": "Nowakowski Jacek, dr inż.",
+    "available": "1/99",
+    "enrolled": "16",
+    "ects": "3",
+    "semester": "5",
+    "selected": true
+  }, {
+    "code": "02 646211 00",
+    "name": "Artificial Intelligence",
+    "instructor": "dr inż. Witold Marańda",
+    "available": "5/15",
+    "enrolled": "8",
+    "ects": "6",
+    "semester": "5",
+    "selected": false
   }]
 }
