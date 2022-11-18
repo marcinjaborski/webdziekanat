@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Box, Divider, Paper, TextField, Typography } from '@mui/material';
+import { Box, Divider, Paper, Typography } from '@mui/material';
+import DataTextField from './DataTextField';
 
 type PersonalData = {
   name: string;
@@ -20,20 +21,6 @@ type PersonalDataAddress = {
   postcode: string;
   city: string;
   voivodeship: string;
-};
-
-const DataTextField = (props: { label: string; value: string }) => {
-  return (
-    <TextField
-      label={props.label}
-      value={props.value}
-      variant="standard"
-      margin="dense"
-      InputProps={{
-        readOnly: true,
-      }}
-    />
-  );
 };
 
 const PersonalDataPage = () => {
@@ -75,7 +62,7 @@ const PersonalDataPage = () => {
         <Box sx={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
           <DataTextField label="Place of birth" value={data.birthPlace} />
           <DataTextField label="Date of birth" value={data.birthDate} />
-          <DataTextField label="PESEL indentifier" value={data.pesel} />
+          <DataTextField label="PESEL identifier" value={data.pesel} />
         </Box>
       </Box>
       <Typography variant="h5" sx={{ mt: 3 }}>

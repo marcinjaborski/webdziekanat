@@ -6,6 +6,7 @@ import { Route, Routes } from 'react-router';
 import BulletinBoard from './components/BulletinBoard';
 import CourseSchedule from './components/CourseSchedule';
 import PersonalDataPage from './components/PersonalDataPage';
+import GeneralDataPage from './components/General';
 
 export const primaryColor = '#8b0304';
 
@@ -32,6 +33,7 @@ function App() {
             <Route path="/bulletinBoard" element={<BulletinBoard />} />
             <Route path="/schedule" element={<CourseSchedule />} />
             <Route path="/personalData" element={<PersonalDataPage />} />
+            <Route path="/generalData" element={<GeneralDataPage />} />
           </Routes>
         </Box>
       </Box>

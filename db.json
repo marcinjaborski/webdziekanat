@@ -47,5 +47,22 @@
       "city": "Łódź",
       "voivodeship": "łódzkie"
     }
+  },
+  "general": {
+    "faculty": "IFE",
+    "course": "Computer Science",
+    "specialty": "none",
+    "studyMode": "full-time",
+    "length": "3.5",
+    "index": "234680",
+    "currentYear": 3,
+    "currentSemester": 5,
+    "academicYear": "2022/23 Z",
+    "semesterQualification": "positive",
+    "average": {
+      "semester": 4.85,
+      "whole": 4.9,
+      "ects": "120/150"
+    }
   }
 }
