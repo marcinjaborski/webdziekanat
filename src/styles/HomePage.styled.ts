@@ -3,6 +3,8 @@ import styled from 'styled-components';
 export const HomePageStyled = styled.div`
   .tileContainer {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 20px;
   }
   .MuiPaper-root {

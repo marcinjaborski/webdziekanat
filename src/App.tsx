@@ -1,6 +1,6 @@
 import TopBar from './components/TopBar';
 import { Box, createTheme, ThemeProvider } from '@mui/material';
-import NavigationDrawer from './components/NavigationDrawer';
+import Navigation from './components/Navigation';
 import HomePage from './components/HomePage';
 import { Route, Routes } from 'react-router';
 import BulletinBoard from './components/BulletinBoard';
@@ -26,7 +26,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <TopBar />
       <Box className="content">
-        <NavigationDrawer />
+        <Navigation />
         <Box sx={{ p: 3, width: '100%' }}>
           <Routes>
             <Route path="/" element={<HomePage />} />
