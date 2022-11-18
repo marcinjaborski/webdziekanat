@@ -10,7 +10,6 @@ import PersonIcon from '@mui/icons-material/Person';
 import DatasetIcon from '@mui/icons-material/Dataset';
 import SummarizeIcon from '@mui/icons-material/Summarize';
 import HowToVoteIcon from '@mui/icons-material/HowToVote';
-import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import { Link } from 'react-router-dom';
 
 const Navigation = () => {
@@ -73,14 +72,6 @@ const Navigation = () => {
             <ListItemText>Elective courses</ListItemText>
           </MenuItem>
         </Link>
-        <Link to="/fees">
-          <MenuItem>
-            <ListItemIcon>
-              <AttachMoneyIcon />
-            </ListItemIcon>
-            <ListItemText>Fees</ListItemText>
-          </MenuItem>
-        </Link>
         <a href="https://programy.p.lodz.pl/ectslabel-web/">
           <MenuItem>
             <ListItemIcon>
@@ -89,7 +80,7 @@ const Navigation = () => {
             <ListItemText>ECTS Course catalogue</ListItemText>
           </MenuItem>
         </a>
-        <Link to="/calendar">
+        <Link to="/terms">
           <MenuItem>
             <ListItemIcon>
               <CalendarMonthIcon />
