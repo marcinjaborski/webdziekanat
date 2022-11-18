@@ -26,3 +26,8 @@ a:hover {
   display: flex;
   min-height: calc(100vh - 64px);
 }
+
+.active span,
+.active svg {
+  color: #8b0304;
+}
