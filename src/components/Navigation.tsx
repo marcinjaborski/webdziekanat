@@ -11,7 +11,8 @@ import DatasetIcon from '@mui/icons-material/Dataset';
 import SummarizeIcon from '@mui/icons-material/Summarize';
 import HowToVoteIcon from '@mui/icons-material/HowToVote';
 import { Link, useLocation } from 'react-router-dom';
-import { ReactNode } from 'react';
+import { ReactNode, useContext } from 'react';
+import { AuthContext } from '../App';
 
 type NavigationButtonProps = {
   link: string;
@@ -43,22 +44,25 @@ const NavigationButton = (props: NavigationButtonProps) => {
 };
 
 const Navigation = () => {
+  const auth = useContext(AuthContext);
   return (
     <NavigationStyled>
       <MenuList sx={{ display: 'flex', flexDirection: 'column' }}>
         <NavigationButton link="https://virtul.p.lodz.pl/virtul/" icon={<HomeIcon />} label="virTul" />
         <NavigationButton link="/bulletinBoard" icon={<DashboardIcon />} label="Bulletin board" />
-        <NavigationButton link="/schedule" icon={<ScheduleIcon />} label="Course schedule" />
-        <NavigationButton link="/personalData" icon={<PersonIcon />} label="Personal Info" />
-        <NavigationButton link="/generalData" icon={<DatasetIcon />} label="General data" />
-        <NavigationButton link="/reportCard" icon={<SummarizeIcon />} label="Report card" />
-        <NavigationButton link="/electiveCourses" icon={<HowToVoteIcon />} label="Elective courses" />
+        {auth?.isLogged ? <NavigationButton link="/schedule" icon={<ScheduleIcon />} label="Course schedule" /> : null}
+        {auth?.isLogged ? <NavigationButton link="/personalData" icon={<PersonIcon />} label="Personal Info" /> : null}
+        {auth?.isLogged ? <NavigationButton link="/generalData" icon={<DatasetIcon />} label="General data" /> : null}
+        {auth?.isLogged ? <NavigationButton link="/reportCard" icon={<SummarizeIcon />} label="Report card" /> : null}
+        {auth?.isLogged ? (
+          <NavigationButton link="/electiveCourses" icon={<HowToVoteIcon />} label="Elective courses" />
+        ) : null}
         <NavigationButton
           link="https://programy.p.lodz.pl/ectslabel-web/"
           icon={<SchoolIcon />}
           label="ECTS Course catalogue"
         />
-        <NavigationButton link="/terms" icon={<CalendarMonthIcon />} label="Terms" />
+        {auth?.isLogged ? <NavigationButton link="/terms" icon={<CalendarMonthIcon />} label="Terms" /> : null}
         <NavigationButton link="https://samorzad.p.lodz.pl/" icon={<GroupsIcon />} label="Student government" />
       </MenuList>
     </NavigationStyled>

@@ -1,8 +1,10 @@
 import { Box, Button, Divider, Paper, TextField, Typography } from '@mui/material';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../App';
 
 const Login = () => {
+  const auth = useContext(AuthContext);
   const [login, setLogin] = useState('');
   const [password, setPassword] = useState('');
   return (
@@ -28,7 +30,7 @@ const Login = () => {
           helperText="For security reasons, log-off after use and close the browser!"
         />
         <Link to="/">
-          <Button variant="contained" sx={{ mt: 3 }}>
+          <Button variant="contained" sx={{ mt: 3 }} onClick={() => auth?.login()}>
             Login
           </Button>
         </Link>

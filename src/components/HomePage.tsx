@@ -4,10 +4,12 @@ import DashboardIcon from '@mui/icons-material/Dashboard';
 import ScheduleIcon from '@mui/icons-material/Schedule';
 import SchoolIcon from '@mui/icons-material/School';
 import PersonIcon from '@mui/icons-material/Person';
-import { primaryColor } from '../App';
+import { AuthContext, primaryColor } from '../App';
 import { Link } from 'react-router-dom';
+import { useContext } from 'react';
 
 const HomePage = () => {
+  const auth = useContext(AuthContext);
   return (
     <HomePageStyled>
       <Typography variant="subtitle1" sx={{ color: primaryColor, fontWeight: 'bold', m: 2 }}>
@@ -21,24 +23,28 @@ const HomePage = () => {
             Bulletin Board
           </Paper>
         </Link>
-        <Link to="/schedule">
-          <Paper sx={{ bgcolor: '#336d71' }}>
-            <ScheduleIcon />
-            Course Schedule
-          </Paper>
-        </Link>
+        {auth?.isLogged ? (
+          <Link to="/schedule">
+            <Paper sx={{ bgcolor: '#336d71' }}>
+              <ScheduleIcon />
+              Course Schedule
+            </Paper>
+          </Link>
+        ) : null}
         <a href="https://programy.p.lodz.pl/ectslabel-web/" target="_blank" rel="noreferrer">
           <Paper sx={{ bgcolor: '#7d882e' }}>
             <SchoolIcon />
             ECTS Course catalogue
           </Paper>
         </a>
-        <Link to="/personalData">
-          <Paper sx={{ bgcolor: '#750105' }}>
-            <PersonIcon />
-            Personal data
-          </Paper>
-        </Link>
+        {auth?.isLogged ? (
+          <Link to="/personalData">
+            <Paper sx={{ bgcolor: '#750105' }}>
+              <PersonIcon />
+              Personal data
+            </Paper>
+          </Link>
+        ) : null}
       </Box>
       <Typography variant="subtitle2" sx={{ color: 'green', fontWeight: 'bold', m: 1 }}>
         Attention!

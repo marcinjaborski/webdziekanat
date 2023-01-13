@@ -1,8 +1,11 @@
 import { AppBar, Box, Button, Toolbar } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { TopBarStyled } from '../styles/TopBar.styled';
+import { useContext } from 'react';
+import { AuthContext } from '../App';
 
 const TopBar = () => {
+  const auth = useContext(AuthContext);
   return (
     <TopBarStyled>
       <AppBar position="sticky">
@@ -24,9 +27,17 @@ const TopBar = () => {
               </Button>
             </a>
           </Box>
-          <Link to="/login">
-            <Button color="inherit">Login</Button>
-          </Link>
+          {auth?.isLogged ? (
+            <Link to="/">
+              <Button color="inherit" onClick={() => auth?.logout()}>
+                Logout
+              </Button>
+            </Link>
+          ) : (
+            <Link to="/login">
+              <Button color="inherit">Login</Button>
+            </Link>
+          )}
         </Toolbar>
       </AppBar>
     </TopBarStyled>

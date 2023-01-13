@@ -11,6 +11,7 @@ import ReportCard from './components/ReportCard';
 import ElectiveCourses from './components/ElectiveCourses';
 import Terms from './components/Terms';
 import Login from './components/Login';
+import { createContext, useState } from 'react';
 
 export const primaryColor = '#8b0304';
 
@@ -25,26 +26,35 @@ const theme = createTheme({
   },
 });
 
+export const AuthContext = createContext<{ isLogged: boolean; login: Function; logout: Function } | null>(null);
+
 function App() {
+  const [isLogged, setIsLogged] = useState(false);
+
+  const login = () => setIsLogged(true);
+  const logout = () => setIsLogged(false);
+
   return (
     <ThemeProvider theme={theme}>
-      <TopBar />
-      <Box className="content">
-        <Navigation />
-        <Box sx={{ p: 3, width: '100%' }}>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/bulletinBoard" element={<BulletinBoard />} />
-            <Route path="/schedule" element={<CourseSchedule />} />
-            <Route path="/personalData" element={<PersonalDataPage />} />
-            <Route path="/generalData" element={<GeneralDataPage />} />
-            <Route path="/reportCard" element={<ReportCard />} />
-            <Route path="/electiveCourses" element={<ElectiveCourses />} />
-            <Route path="/terms" element={<Terms />} />
-            <Route path="/login" element={<Login />} />
-          </Routes>
+      <AuthContext.Provider value={{ isLogged, login, logout }}>
+        <TopBar />
+        <Box className="content">
+          <Navigation />
+          <Box sx={{ p: 3, width: '100%' }}>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/bulletinBoard" element={<BulletinBoard />} />
+              {isLogged ? <Route path="/schedule" element={<CourseSchedule />} /> : null}
+              {isLogged ? <Route path="/personalData" element={<PersonalDataPage />} /> : null}
+              {isLogged ? <Route path="/generalData" element={<GeneralDataPage />} /> : null}
+              {isLogged ? <Route path="/reportCard" element={<ReportCard />} /> : null}
+              {isLogged ? <Route path="/electiveCourses" element={<ElectiveCourses />} /> : null}
+              {isLogged ? <Route path="/terms" element={<Terms />} /> : null}
+              <Route path="/login" element={<Login />} />
+            </Routes>
+          </Box>
         </Box>
-      </Box>
+      </AuthContext.Provider>
     </ThemeProvider>
   );
 }
